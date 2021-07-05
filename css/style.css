@@ -263,3 +263,96 @@ SIDEBAR
     background-color: white;
     color: #3c1053;
 }
+
+/*########################################################################
+
+SESSÃO CONHECIMENTOS
+
+##########################################################################*/
+
+.conhecimentos{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(6, 5rem);
+    row-gap: 1rem;
+}
+
+.conhecimento:nth-child(1){
+    grid-column: 3 / 7;
+    grid-row: 1 / 2;
+}
+
+.conhecimento:nth-child(2){
+    grid-column: 2 / 6;
+    grid-row: 3 / 4;  
+}
+
+.conhecimento:nth-child(3){
+    grid-column: 3 / 7;
+    grid-row: 5 / 6;  
+}
+
+.conhecimento:nth-child(4){
+    grid-column: 11 / 15;
+    grid-row: 1 / 2;  
+}
+
+.conhecimento:nth-child(5){
+    grid-column: 12 / 16;
+    grid-row: 3 / 4; 
+}
+
+.conhecimento:nth-child(6){
+    grid-column: 11 / 15;
+    grid-row: 5 / 6; 
+}
+
+.conhecimento-img-wrapper{
+    grid-column: 7 / 11;
+    grid-row: 2 / 5;
+}
+
+.sessao-conhecimentos{
+    background-color: #d6d6d6;
+}
+
+.sessao-header{
+    display: flex;
+    justify-content: center;
+}
+
+.sessao-header h1{
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 300;
+    color: gray;
+    border-bottom: 2px solid #3c1053;
+    margin-bottom: 1.5rem;
+}
+
+.conhecimento-header{
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+.conhecimento-header i{
+    font-size: 2.5rem;
+}
+
+.conhecimento-header h3{
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+
+.conhecimento-text{
+    font-family: var(--font-secundary);
+    margin-top: 1rem;
+}
+
+.conhecimento-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+}
