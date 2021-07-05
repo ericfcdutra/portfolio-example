@@ -6,5 +6,5 @@ Exemplo de portfolio seguindo o tutorial fornecido pelo canal João Carlos Lima 
 ## Ícones
 :package: Nova funcionalidade
 :up: Atualização
-:beatle: Correção de bug
+:beetle: Correção de bug
 :checkered_flag: Release
