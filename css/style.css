@@ -455,3 +455,119 @@ SESSÃO PROJETOS
 .card:hover img{
     opacity: .4;
 }
+
+/*########################################################################
+
+SESSÃO CONTATO
+
+##########################################################################*/
+
+.sessao-contato{
+    width: 100%;
+    height: 100vh;
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper{
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,.4);
+}
+
+.contato-left{
+    flex-basis: 35%;
+    background-image: linear-gradient(rgba(15,15,15,.6), rgba(22,22,22,.9)), url("../img/contato.jpg");
+    background-size: cover;
+}
+
+.contato-right{
+    flex-basis: 65%;
+    background-color: #eee;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.sessao-contato h1{
+    font-family: var(--font-primary);
+    color: #303030;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.sessao-contato form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.field{
+    background: transparent;
+    border: none;
+    width: 20rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-family: var(--font-secundary);
+    border-bottom: 1px dashed #303030;
+    outline: none;
+}
+
+.field:focus{
+    border-bottom: 1px solid #303030;
+}
+
+.input-group{
+    position: relative;
+}
+
+.field-label{
+    position: absolute;
+    left: 0;
+    font-family: var(--font-secundary);
+    font-size: .75rem;
+    text-transform: uppercase;
+    text-shadow: 0 2rem 2rem rgba(0,0,0,.4);
+    top: -1rem;
+    transition: ease-out 0.2s;
+}
+
+.field:focus ~ label{
+    font-size: 1rem;
+    color: #3c1053;
+    font-weight: 800;
+}
+
+.sessao-contato button{
+    font-family: var(--font-action);
+    font-size: .75rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0.75rem 2rem;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20rem;
+}
+
+.sessao-contato button:hover, button:focus{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.input-group textarea{
+    padding-top: 1rem;
+    min-width: 20rem;
+    max-width: 20rem;
+    min-height: 2rem;
+    max-height: 8rem;
+}
