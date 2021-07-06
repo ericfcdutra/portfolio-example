@@ -358,3 +358,100 @@ SESSÃO CONHECIMENTOS
     object-fit: cover;
     width: 100%;
 }
+
+/*########################################################################
+
+SESSÃO PROJETOS
+
+##########################################################################*/
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(61, 58, 58);
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    border-radius: 10px;
+    transition: opacity ease-in .3s;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0 0.1rem 0.3rem rgba(0,0,0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-in .3s;
+}
+
+.card-info h2{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.card-info h3{
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ad5389;
+}
+
+.card-info p{
+    font-family: var(--font-secundary);
+    color: #eee;
+    font-weight: 600;
+    width: 90%;
+    margin: 1rem 0;
+}
+
+.card-info button{
+    font-family: var(--font-action);
+    font-size: .75rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0.75rem 2rem;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-info button:hover{
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+}
+
+.card:hover .card-info{
+    opacity: 1;
+    visibility: visible;
+    bottom: 2rem;
+}
+
+.card:hover img{
+    opacity: .4;
+}
