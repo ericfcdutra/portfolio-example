@@ -15,6 +15,27 @@
     --font-action: "Muli", serif;
 }
 
+.btn{
+    font-family: var(--font-action);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0.75rem 2rem;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover, btn:focus{
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+}
+
 /*########################################################################
 
 MENU HAMBURGUER
@@ -162,26 +183,8 @@ header{
 }
 
 .banner button{
-    font-family: var(--font-action);
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    background: #ad5389;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 0.75rem 2rem;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-    opacity: 0;
     animation: move-banner 1s ease-in forwards 0.5s;
-}
-
-.banner button:hover{
-    background: #D3CCE3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: black;
+    opacity: 0;
 }
 
 @keyframes move-banner {
@@ -368,6 +371,7 @@ SESSÃO PROJETOS
 .projetos{
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 5rem;
 }
 
 .card{
@@ -425,25 +429,7 @@ SESSÃO PROJETOS
 }
 
 .card-info button{
-    font-family: var(--font-action);
     font-size: .75rem;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    background: #ad5389;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 0.75rem 2rem;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.card-info button:hover{
-    background: #D3CCE3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: black;
 }
 
 .card:hover .card-info{
@@ -543,18 +529,6 @@ SESSÃO CONTATO
 }
 
 .sessao-contato button{
-    font-family: var(--font-action);
-    font-size: .75rem;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    background: #ad5389;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 0.75rem 2rem;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
     width: 20rem;
 }
 
