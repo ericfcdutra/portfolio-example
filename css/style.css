@@ -536,6 +536,7 @@ SESSÃO CONTATO
     background: #0f0c29;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
 }
 
 .input-group textarea{
@@ -544,4 +545,93 @@ SESSÃO CONTATO
     max-width: 20rem;
     min-height: 2rem;
     max-height: 8rem;
+}
+
+/*########################################################################
+
+SESSÃO ORÇAMENTO
+
+##########################################################################*/
+
+.sessao-orcamento{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(25,25,25,.4), rgba(25,25,25,.6)), url("../img/bg-orcamento.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orcamento-wrapper{
+    width: 60%;
+    height: 80%;
+    --bg-clr: 68,32,54,.3;
+    background-image: linear-gradient(rgba(var(--bg-clr)), rgba(var(--bg-clr))), url("../img/bg-form-orcamento.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,.6);
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.sessao-orcamento h1{
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: lighter;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0 3rem;
+    color: white;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.sessao-orcamento form{
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4rem;
+    background: #ffffff99;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.sessao-orcamento label{
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sessao-orcamento input[type="number"]{
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 4rem;
+    height: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 0.3rem;
+}
+
+.sessao-orcamento input[type="checkbox"]{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.group-layout label{
+    font-weight: 400;
+}
+
+.sessao-orcamento button{
+    grid-column: span 2;
 }
