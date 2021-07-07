@@ -46,7 +46,7 @@ MENU HAMBURGUER
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -210,6 +210,7 @@ SIDEBAR
     position: fixed;
     right: -20rem;
     top: 0;
+    z-index: 9;
     transition: right ease-out .5s;
 }
 
@@ -275,11 +276,17 @@ SESSÃO CONHECIMENTOS
 
 ##########################################################################*/
 
+.sessao-conhecimentos{
+    width: 100%;
+    height: 100vh;
+}
+
 .conhecimentos{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 5rem);
     row-gap: 1rem;
+    margin-top: 10%;
 }
 
 .conhecimento:nth-child(1){
@@ -368,10 +375,16 @@ SESSÃO PROJETOS
 
 ##########################################################################*/
 
+.sessao-projetos{
+    width: 100%;
+    height: 100vh;
+}
+
 .projetos{
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 5rem;
+    margin-top: 10%;
 }
 
 .card{
@@ -634,4 +647,74 @@ SESSÃO ORÇAMENTO
 
 .sessao-orcamento button{
     grid-column: span 2;
+}
+
+/*########################################################################
+
+FOOTER
+
+##########################################################################*/
+
+footer{
+    width: 100%;
+    height: 5rem;
+    background-color: #303030;
+}
+
+.footer-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.p-wrapper{
+    font-family: var(--font-secundary);
+    color: white;
+}
+
+.footer-social-media{
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-social-media i{
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .1rem;
+    border-radius: 50%;
+}
+
+.footer-social-media i:hover{
+    background-color: white;
+    color: #3c1053;
+}
+
+#link-topo{
+    position: fixed;
+    bottom: 1rem;
+    right: 5%;
+}
+
+#link-topo:hover i{
+    transform: scale(1.1) translateY(-0.5rem);
+}
+
+#link-topo i{
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .1rem;
+    border-radius: 50%;
+    text-shadow: 0 .2rem 5px rgba(0,0,0,.6);
 }
