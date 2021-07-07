@@ -612,7 +612,7 @@ SESSÃO ORÇAMENTO
     margin: 4rem;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 4rem;
+    gap: 2rem;
     background: #ffffff99;
     border-radius: 20px;
     padding: 2rem;
@@ -700,10 +700,21 @@ footer{
     position: fixed;
     bottom: 1rem;
     right: 5%;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 3px;
+}
+
+#link-topo:hover,
+#link-topo:focus{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #link-topo:hover i{
-    transform: scale(1.1) translateY(-0.5rem);
+    transform: scale(1.1);
 }
 
 #link-topo i{
