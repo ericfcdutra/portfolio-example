@@ -169,7 +169,7 @@ header{
     margin-bottom: 2rem;
     opacity: 0;
     animation: move-banner 1s ease-in forwards;
-    width: 18ch;
+    max-width: 18ch;
 }
 
 .banner p{
@@ -194,6 +194,17 @@ header{
     }
     100%{
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .banner h1{
+        font-size: 2.5rem;
+        padding-right:.5rem;
+    }
+
+    .banner p{
+        font-size: 1.5rem;
     }
 }
 
@@ -279,6 +290,7 @@ SESSÃO CONHECIMENTOS
 .sessao-conhecimentos{
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 .conhecimentos{
@@ -317,11 +329,6 @@ SESSÃO CONHECIMENTOS
 .conhecimento:nth-child(6){
     grid-column: 11 / 15;
     grid-row: 5 / 6; 
-}
-
-.conhecimento-img-wrapper{
-    grid-column: 7 / 11;
-    grid-row: 1 / 4;
 }
 
 .sessao-conhecimentos{
@@ -364,10 +371,73 @@ SESSÃO CONHECIMENTOS
     margin-top: 1rem;
 }
 
+.conhecimento-img-wrapper{
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin-top: 5rem;
+}
+
 .conhecimento-img-wrapper img{
     object-fit: cover;
     width: 100%;
 }
+
+@media screen and (max-width: 960px) {
+    .sessao-conhecimentos{
+        height: max-content;
+        padding-bottom: 2rem;
+    }
+
+    .conhecimentos{
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .conhecimento:nth-child(1){
+        grid-column: 1 / 16;
+        grid-row: 1;
+    }
+    
+    .conhecimento:nth-child(2){
+        grid-column: 1 / 16;
+        grid-row: 2;
+    }
+    
+    .conhecimento:nth-child(3){
+        grid-column: 1 / 16;
+        grid-row: 3; 
+    }
+    
+    .conhecimento:nth-child(4){
+        grid-column: 1 / 16;
+        grid-row: 4; 
+    }
+    
+    .conhecimento:nth-child(5){
+        grid-column: 1 / 16;
+        grid-row: 5; 
+    }
+    
+    .conhecimento:nth-child(6){
+        grid-column: 1 / 16;
+        grid-row: 6; 
+    }
+
+    .conhecimento-img-wrapper img{
+        display: none;
+        visibility: hidden;
+    }
+
+    .conhecimento-header i,
+    .conhecimento-text p{
+        margin-left: 1rem;
+    }
+
+}
+
 
 /*########################################################################
 
@@ -455,6 +525,88 @@ SESSÃO PROJETOS
     opacity: .4;
 }
 
+@media screen and (max-width: 1024px){
+    .sessao-projetos{
+        height: max-content;
+    }
+    .projetos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card{
+        width: 80%;
+        height: 15rem;
+    }
+
+    .card-info{
+        height: 100%;
+        padding: 0 1rem;
+    }
+
+    .card:hover .card-info{
+        bottom: .2rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .card-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (3, 1fr);
+        align-content: center;
+        justify-content: center;
+    }
+
+    .card-info h2{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .card-info h3{
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+        box-sizing: border-box;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .card-info p{
+        grid-column: span 2;
+        grid-row: 2;
+    }
+
+    .card-info button{
+        grid-column: 1;
+        grid-row: 3;
+        height: 2rem;
+        padding: .5rem 2rem
+    }
+
+    @media screen and (max-width: 415px) {
+        .card-info p{
+            overflow: hidden;
+            margin-bottom: .5rem;
+        }
+
+        .card-info h2{
+            font-size: 1.5rem;
+        }
+
+        .card-info h3{
+            font-size: 1.5rem;
+        }
+
+        .card-info button{
+            grid-column: span 2;
+        }
+    }
+
+}
+
 /*########################################################################
 
 SESSÃO CONTATO
@@ -501,15 +653,15 @@ SESSÃO CONTATO
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     align-items: center;
+    gap: 2rem;
 }
 
 .field{
     background: transparent;
     border: none;
     width: 20rem;
-    height: 3rem;
+    height: 2rem;
     font-size: 1rem;
     font-family: var(--font-secundary);
     border-bottom: 1px dashed #303030;
@@ -560,6 +712,35 @@ SESSÃO CONTATO
     max-height: 8rem;
 }
 
+@media screen and (max-width: 655px){
+    .contato-wrapper{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .contato-right{
+        max-width: 90%;
+    }
+
+    .input-group{
+        width: 90%;
+    }
+    
+    .field{
+        width: 90%;
+    }
+    
+    .input-group textarea{
+        min-width: 90%;
+        max-width: 90%;
+    }
+
+    .sessao-contato button{
+        width: 90%;
+    }
+}
+
 /*########################################################################
 
 SESSÃO ORÇAMENTO
@@ -582,7 +763,7 @@ SESSÃO ORÇAMENTO
     height: 80%;
     --bg-clr: 68,32,54,.3;
     background-image: linear-gradient(rgba(var(--bg-clr)), rgba(var(--bg-clr))), url("../img/bg-form-orcamento.jpg");
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
     box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,.6);
@@ -611,8 +792,8 @@ SESSÃO ORÇAMENTO
 .sessao-orcamento form{
     margin: 4rem;
     display: grid;
+    column-gap: 2rem;
     grid-template-columns: auto 1fr;
-    gap: 2rem;
     background: #ffffff99;
     border-radius: 20px;
     padding: 2rem;
@@ -647,6 +828,79 @@ SESSÃO ORÇAMENTO
 
 .sessao-orcamento button{
     grid-column: span 2;
+}
+
+@media screen and (max-width: 1366px){
+    .orcamento-wrapper{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .sessao-orcamento form{
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(10, 1fr);
+        min-width: 60%;
+    }
+
+    .sessao-orcamento label[for="qtd"]{
+        grid-column: span 2;
+        grid-row: 1;
+    }
+
+    .sessao-orcamento input[type="number"]{
+        grid-column: span 2;
+        grid-row: 2;
+    }
+
+    .sessao-orcamento label[for="js"]{
+        grid-column: span 2;
+        grid-row: 3;
+    }
+
+    .sessao-orcamento input[type="checkbox"]{
+        grid-column: span 2;
+        grid-row: 4;
+    }
+
+    #lbl-layout{
+        grid-column: span 2;
+        grid-row: 5;
+    }
+
+    .group-layout{
+        grid-column: span 2;
+        grid-row: 6;
+    }
+
+    .sessao-orcamento label[for="prazo"]{
+        grid-column: span 2;
+        grid-row: 7;
+    }
+
+    .sessao-orcamento input[type="range"]{
+        grid-column: span 2;
+        grid-row: 8;
+    }
+    
+    .sessao-orcamento label[for="preco"]{
+        grid-column: span 2;
+        grid-row: 9;
+    }
+
+    .sessao-orcamento button{
+        grid-column: span 2;
+        grid-row: 10;
+    }
+
+}
+
+@media screen and (max-width: 470px){
+    .sessao-orcamento h1{
+        font-size: 1.5rem;
+        padding: 0 1.5rem;
+        top: -1.3rem;
+    }
 }
 
 /*########################################################################
@@ -728,4 +982,36 @@ footer{
     padding: .1rem;
     border-radius: 50%;
     text-shadow: 0 .2rem 5px rgba(0,0,0,.6);
+}
+
+@media screen and (max-width: 780px){
+    #link-topo{
+        bottom: 5.5rem;
+    }
+
+    .footer-social-media{
+        gap: .5rem;
+    }
+
+    .footer-social-media i{
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .footer-content{
+        flex-direction:column-reverse;
+    }
+    .footer-social-media{
+        width: 100%;
+        padding-bottom: 0.2rem;
+        justify-content: center;
+        border-bottom: 1px solid white;
+    }
+
+    .p-wrapper{
+        font-size: .75rem;
+    }
 }
