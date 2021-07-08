@@ -1,3 +1,17 @@
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+        // document ready
+        //Preloader
+        var preloader = document.getElementsByClassName("spinner-wrapper")[0];
+        preloader.style.opacity = 0;
+        setTimeout(function () {
+            preloader.style.visibility = "hidden";
+        }, 1000)
+        console.log("Loaded")
+    }
+};
+
+
 document.querySelector(".hamburguer").addEventListener("click", () =>
     document.querySelector(".container").classList.toggle("show-menu")
 );
